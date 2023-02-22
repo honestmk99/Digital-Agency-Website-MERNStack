@@ -5,12 +5,33 @@ import introImg from '../assets/img/intro-img.png'
 import sellerImg from '../assets/img/seller.png'
 import discordImg from '../assets/img/discord.png'
 import IntroCard from '../components/common/IntroCard'
+import { Link } from 'react-router-dom';
+import EscapeStep from '../components/common/EscapeStep';
+
+const escapeData = [
+  {
+    header: 'Step 1',
+    body: "- Access our e-commerce store for powerful courses on psychology, crypto, IT, and more, designed to help you develop skills and knowledge to thrive in the modern digital world."
+  },
+  {
+    header: 'Step 2',
+    body: "- Join our agency to gain access to exclusive job opportunities, training, and powerful tools that can help you start or grow your career and business for FREE."
+  },
+  {
+    header: 'Step 3',
+    body: "- In order to truly escape the matrix, it's important to surround yourself with people who share your mindset and values. That's why our agency offers a community of like-minded individuals who are all working towards financial freedom and personal growth. Through our online platform, you can connect with others, share your experiences, and learn from each other. This community is a great place to find support and encouragement as you work towards your goals."
+  },
+  {
+    header: 'Step 4',
+    body: "- Use the skills and knowledge you've acquired to build a life of abundance, independence, and freedom. Whether you're looking to start a new business, build a side hustle, or pursue a fulfilling career, our services can help you get there faster and more efficiently than you ever thought possible."
+  }
+];
+
 
 const Home = () => {
-  const [quantity, setQuantity] = useState(1);
-  const handleQuantity = (e) => {
-    setQuantity(e.target.value);
-  }
+  const [quantity1, setQuantity1] = useState(1);
+  console.log('asfasf', quantity1)
+  const [quantity2, setQuantity2] = useState(1);
   return (
     <div className='home bg-[#0d1245]'>
       <div className='flex items-center justify-center pt-[60px]'>
@@ -43,8 +64,8 @@ const Home = () => {
           BUY ONE PRODUCT AND RECEIVE A BONUS ONE-MONTH SUBSCRIPTION TO OUR EXCLUSIVE TRAINING PROGRAM, DESIGNED TO EQUIP YOU WITH THE SKILLS AND KNOWLEDGE NEEDED TO SUCCEED IN POPULAR INCOME-GENERATING FIELDS SUCH AS SMMA, WEB DESIGN, VIRTUAL ASSISTANCE, AND MORE. OUR PROGRAM CONSISTS OF THREE COMPREHENSIVE STAGES, EACH TAILORED TO ENHANCE YOUR SKILLSET AND ADVANCE YOUR CAREER. DON'T MISS OUT ON THIS OPPORTUNITY TO ELEVATE YOUR EXPERTISE AND BOOST YOUR EARNING POTENTIAL.
         </p>
       </div>
-      <IntroCard Img={offerImg} setQuantity={setQuantity} quantity={quantity} title='LIMITED OFFER' content="Transform Your Life with Andrew Tate's OG Courses"/>
-      <IntroCard Img={sellerImg} setQuantity={setQuantity} quantity={quantity}  title='BEST SELLER' content='The Ultimate Learning Bundle: 1TB of Paid Courses Worth $200K+'/>
+      <IntroCard Img={offerImg} setQuantity={setQuantity1} quantity={quantity1} title='LIMITED OFFER' content="Transform Your Life with Andrew Tate's OG Courses" />
+      <IntroCard Img={sellerImg} setQuantity={setQuantity2} quantity={quantity2} title='BEST SELLER' content='The Ultimate Learning Bundle: 1TB of Paid Courses Worth $200K+' />
       <div className='flex items-center justify-center pt-[60px]'>
         <div className='intro  w-[50%] pl-[140px] pr-[30px]'>
           <p className='intro-title text-[#c471f5] text-[30px] font-bold pb-[15px]'>
@@ -58,7 +79,22 @@ const Home = () => {
           <Button variant="filled" className='bg-[#a4ef7d] text-[#0d1245] font-thin'>JOIN NOW</Button>
         </div>
         <div className='intro-img  w-[50%] pr-[70px]'>
-          <img src={discordImg} alt="intro-img" width="" />
+          <img src={discordImg} alt="intro-img" />
+        </div>
+      </div>
+      <div className='escape flex flex-col items-center justify-center '>
+        <div className='text-[12px] text-[#7f4db2] '>
+          THE WAY TO
+        </div>
+        <div className='text-[53px] text-[#c471f5] font-bold '>
+          ESCAPE THE MATRIX
+        </div>
+        <div className='w-[50%]'>
+          {escapeData.map((data) => {
+            return (
+              <EscapeStep header={data.header} body={data.body} />
+            )
+          })}
         </div>
       </div>
     </div >

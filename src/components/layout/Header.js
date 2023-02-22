@@ -32,7 +32,7 @@ const Header = () => {
                 <div className="px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div className="w-[20%]">
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                            <a href="javascript:void(0)">
+                            <a href="">
                                 <h2 className="text-2xl font-bold text-[#7f4db2]">MatrixAIMovement</h2>
                             </a>
                             <div className="md:hidden">

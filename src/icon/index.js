@@ -6,6 +6,7 @@ import { ReactComponent as VisaIcon } from './visa.svg'
 import { ReactComponent as InstagramIcon } from './instagram.svg'
 import { ReactComponent as TwitterIcon } from './twitter.svg'
 import { ReactComponent as DiscordIcon } from './discord.svg'
+import { ReactComponent as ShareIcon } from './share.svg'
 
 export {
     AmexIcon,
@@ -15,5 +16,6 @@ export {
     VisaIcon,
     InstagramIcon,
     TwitterIcon,
-    DiscordIcon
+    DiscordIcon,
+    ShareIcon
 }

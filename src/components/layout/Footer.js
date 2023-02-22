@@ -121,12 +121,12 @@ const Footer = () => {
                             <VisaIcon />
                         </a>
                     </div>
-                    <div className=''>
-                        <span className='copyright text-[#7f4db2] text-[10px] mt-[10px] ml-[50px]'>
+                    <div className='pb-[50px]'>
+                        <span className='copyright text-[#7f4db2] text-[13px] mt-[10px] ml-[50px]'>
                             @ 2023,
                             <a
                                 href="/"
-                                className="text-[#7f4db2] text-[10px] bg-none rounded-md shadow hover:text-indigo-200 "
+                                className="text-[#7f4db2] text-[13px] bg-none rounded-md shadow hover:text-indigo-200 "
                             >
                                 MatrixAIMovement
                             </a>
