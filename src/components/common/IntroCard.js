@@ -5,8 +5,8 @@ import { ShareIcon } from "../../icon";
 const IntroCard = (props) => {
     let { Img, quantity, setQuantity, title, content } = props
     return (
-        <div className='offer pl-[70px] pb-[100px] '>
-            <p className='offer-title text-[#c471f5] text-[45px] font-bold pb-[15px] mb-[70px]'>
+        <div className='offer pl-[70px] pb-[60px] '>
+            <p className='offer-title text-[#c471f5] text-[45px] font-bold pb-[15px] mb-[50px]'>
                 {title}
             </p>
             <div className='prod flex items-center justify-center'>

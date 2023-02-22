@@ -8,8 +8,8 @@ const tabsData = [
         path: '/'
     },
     {
-        label: 'Catalog',
-        path: '/catalog'
+        label: 'Store',
+        path: '/store'
     },
     {
         label: 'Contact',
@@ -25,15 +25,15 @@ const Header = () => {
     const [navbar, setNavbar] = useState(false);
     return (
         <div className='header'>
-            <div className="bg-[#a4ef7d] bg-opacity-100 h-8 text-center flex items-center justify-center">
+            <div className="bg-[#a4ef7d] bg-opacity-100 h-10 text-center flex items-center justify-center">
                 <span className="my-auto text-[#0d1245] tracking-[2px] font-bold">The Legendary Course Collection</span>
             </div>
             <nav className="w-full bg-[#0d1245] shadow">
                 <div className="px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-                    <div className="w-[20%]">
+                    <div className="w-[30%]">
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                            <a href="">
-                                <h2 className="text-2xl font-bold text-[#7f4db2]">MatrixAIMovement</h2>
+                            <a href="/">
+                                <h2 className="text-[30px] font-bold text-[#7f4db2]">MatrixAIMovement</h2>
                             </a>
                             <div className="md:hidden">
                                 <button
@@ -73,7 +73,7 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-[70%]">
+                    <div className="w-[60%]">
                         <div
                             className={`flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
                                 }`}

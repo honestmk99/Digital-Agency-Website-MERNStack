@@ -39,7 +39,7 @@ const Footer = () => {
                     <p className='font-sm text-[#c471f5]'>NEWSLETTER FOR G'S</p>
                     <p className="font-sm text-[#c471f5] font-bold  text-[40px] my-[20px]">WEEKLY KNOWLEDGE EXCLUSIVELY FOR G'S.</p>
                     <div className="w-72 my-[15px]">
-                        <Input className='' label="Email" icon={<i className="fas fa-heart" />} />
+                        <Input color="purple" label="Email" icon={<i className="fas fa-heart" />} />
                     </div>
                 </div>
                 <div className='about border-t border-[#1b1a53]'>

@@ -3,10 +3,11 @@ import './App.css';
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Catalog from './pages/Catalog'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import MainLayout from './components/layout/MainLayout';
+import Store from './pages/Store';
+import Details from './pages/other/Details';
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index path="/" element={<Home />} />
-          <Route path="catalog" element={<Catalog />} />
+          <Route path="store" element={<Store />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
+          <Route path="details" element={<Details />} />
         </Route>
       </Routes>
     </BrowserRouter>

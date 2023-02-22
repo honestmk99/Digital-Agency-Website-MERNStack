@@ -32,14 +32,14 @@ export default function EscapeStep(props) {
  
   return (
     <Fragment>
-      <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-        <AccordionHeader className=" bg-[#a4ef7d]" onClick={() => handleOpen(1)}>
+      <Accordion open={open === 1} icon={<Icon id={1} open={open} />} className='mb-3.5'>
+        <AccordionHeader className=" bg-[#a4ef7d] p-3 border-[rgb(164_239_125)]" onClick={() => handleOpen(1)}>
           {header}
         </AccordionHeader>
-        <AccordionBody>
+        <AccordionBody className=" bg-[#a4ef7d] p-5 ">
           {body}
         </AccordionBody>
-      </Accordion>
+      </Accordion >
     </Fragment>
   );
 }

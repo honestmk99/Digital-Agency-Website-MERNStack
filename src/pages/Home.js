@@ -66,7 +66,7 @@ const Home = () => {
       </div>
       <IntroCard Img={offerImg} setQuantity={setQuantity1} quantity={quantity1} title='LIMITED OFFER' content="Transform Your Life with Andrew Tate's OG Courses" />
       <IntroCard Img={sellerImg} setQuantity={setQuantity2} quantity={quantity2} title='BEST SELLER' content='The Ultimate Learning Bundle: 1TB of Paid Courses Worth $200K+' />
-      <div className='flex items-center justify-center pt-[60px]'>
+      <div className='flex items-center justify-center'>
         <div className='intro  w-[50%] pl-[140px] pr-[30px]'>
           <p className='intro-title text-[#c471f5] text-[30px] font-bold pb-[15px]'>
             Join Our Movement and Unlock Your Potential Today!
@@ -89,10 +89,10 @@ const Home = () => {
         <div className='text-[53px] text-[#c471f5] font-bold '>
           ESCAPE THE MATRIX
         </div>
-        <div className='w-[50%]'>
+        <div className='w-[50%]' >
           {escapeData.map((data) => {
             return (
-              <EscapeStep header={data.header} body={data.body} />
+              <EscapeStep header={data.header} body={data.body} className="p-2.5;"/>
             )
           })}
         </div>
