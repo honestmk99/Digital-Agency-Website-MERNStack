@@ -30,10 +30,10 @@ const Header = () => {
             </div>
             <nav className="w-full bg-[#0d1245] shadow">
                 <div className="px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-                    <div className="w-[30%]">
+                    <div className="w-[35%]">
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
                             <a href="/">
-                                <h2 className="text-[30px] font-bold text-[#7f4db2]">MatrixAIMovement</h2>
+                                <h2 className="text-[27px] font-bold text-[#7f4db2]">Creatus Marketing Agency</h2>
                             </a>
                             <div className="md:hidden">
                                 <button
@@ -73,7 +73,7 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-[60%]">
+                    <div className="w-[55%]">
                         <div
                             className={`flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
                                 }`}

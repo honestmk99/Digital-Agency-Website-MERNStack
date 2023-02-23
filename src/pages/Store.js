@@ -7,6 +7,7 @@ import {
   Button,
 } from "@material-tailwind/react";
 import Card from "../components/common/Card"
+import Store_img from "../assets/img/store-img.png"
 
 
 const prodData = [
@@ -38,7 +39,7 @@ const prodData = [
 
 const Store = () => {
   return (
-    <div className='bg-[#0d1245] flex items-center justify-center'>
+    <div className='bg-[#0d1245] flex flex-col items-center justify-center'>
       <div className='w-[90%]'>
         <div className='text-[40px] text-[#c471f5] font-bold pt-[50px]'>
           PRODUCT
@@ -81,7 +82,22 @@ const Store = () => {
           })}
         </div>
       </div>
+      <div className='flex items-center justify-center w-full pb-[90px] '>
+        <img src={Store_img} alt="store-img" className='h-[500px] w-full' />
+        <div className='absolute flex flex-col items-center justify-center bg-[#0d1245] mx-[20%] p-[35px]'>
+          <p className='intro-title text-[#c471f5] text-[30px] font-bold pb-[15px]'>
+            CHANGE YOUR LIFE TODAY !
+          </p>
+          <p className='intro-content text-[#7f4db2] text-[18px] text-center'>
+            Ready to take your life to the next level? Change your life today with our products and agency, providing you with the tools, training, and job opportunities you need to succeed.
+          </p>
+          <div className='flex items-center justify-center pt-[40px]'>
+          <Button variant="filled" className='bg-[#a4ef7d] text-[#0d1245] font-thin px-[60px] mx-[10px]'>JOIN NOW</Button>
+          <Button variant="filled" className='bg-[#a4ef7d] text-[#0d1245] font-thin px-[60px] mx-[10px]'>ABOUT US</Button>
+        </div>
+      </div>
     </div>
+    </div >
   )
 }
 

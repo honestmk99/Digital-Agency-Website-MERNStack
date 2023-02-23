@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { Button, Chip } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import offerImg from '../assets/img/offer.png'
 import introImg from '../assets/img/intro-img.png'
 import sellerImg from '../assets/img/seller.png'
 import discordImg from '../assets/img/discord.png'
 import IntroCard from '../components/common/IntroCard'
-import { Link } from 'react-router-dom';
 import EscapeStep from '../components/common/EscapeStep';
 
 const escapeData = [
@@ -37,20 +36,23 @@ const Home = () => {
       <div className='flex items-center justify-center pt-[60px]'>
         <div className='intro  w-[50%] pl-[140px] pr-[30px]'>
           <p className='intro-title text-[#c471f5] text-[30px] font-bold pb-[15px]'>
-            The Matrix AI Movement: Join the Revolution and Transform the Internet
+            The Creatus Marketing Agency: Join the Revolution and Transform the Internet
           </p>
           <p className='intro-content text-[#7f4db2] text-[15px]'>
-            At Matrix AI Movement, we believe that anyone can achieve success in the digital world with the right mindset and tools. That's why our agency provides free training and opportunities for people to make money, with all the necessary tools for the job. We understand that commitment is key to achieving success, and we're here to support you every step of the way.
+            At Creatus Marketing Agency, we believe that anyone can achieve success in the digital world with the right mindset and tools. That's why our agency provides free training and opportunities for people to make money, with all the necessary tools for the job. We understand that commitment is key to achieving success, and we're here to support you every step of the way.
             <br />
             <br />
-            In addition to our agency, we also have an e-commerce store that provides a wealth of information and courses to help you make money. Our courses cover a range of topics, including psychology, crypto, and IT, among many others. With Matrix AI Movement, you have access to all the tools and resources you need to succeed in the digital world. Join us today and start your journey towards success!
+            In addition to our agency, we also have an e-commerce store that provides a wealth of information and courses to help you make money. Our courses cover a range of topics, including psychology, crypto, and IT, among many others. With Creatus Marketing Agency, you have access to all the tools and resources you need to succeed in the digital world. Join us today and start your journey towards success!
             <br />
             <br />
             WE HAVE OVER 200+ PEOPLE SATISFIED WITH OUR PRODUCTS AND SERVICES
             <br />
             <br />
           </p>
-          <Button variant="filled" className='bg-[#a4ef7d] text-[#0d1245] font-thin'>SHOP NOW</Button>
+          <Button onClick={(e) => {
+            e.preventDefault()
+            window.location.href = "/store"
+          }} variant="filled" className='bg-[#a4ef7d] text-[#0d1245] font-thin'>SHOP NOW</Button>
         </div>
         <div className='intro-img  w-[50%] pr-[70px]'>
           <img src={introImg} alt="intro-img" />
@@ -92,7 +94,7 @@ const Home = () => {
         <div className='w-[50%]' >
           {escapeData.map((data) => {
             return (
-              <EscapeStep header={data.header} body={data.body} className="p-2.5;"/>
+              <EscapeStep header={data.header} body={data.body} className="p-2.5;" />
             )
           })}
         </div>
