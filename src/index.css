@@ -1,11 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 .quantity-input::-webkit-outer-spin-button,
 .quantity-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
+.mask-star-2 {
+  mask-image: url("./assets/img/star.svg");
+}
+
+.rating {
+  position: relative;
+  display: inline-flex;
+}
+
+.rating-half .rating-lg input:not(.rating-hidden) {
+  width: 3rem;
+}
+
+.rating-lg input {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.rating input {
+  appearance: none;
+}
+
+.rating :where(input) {
+  cursor: pointer;
+  /* animation: rating-pop var; */
+}
+
+.mask-half-1 {
+  mask-size: 100%;
+  mask-position: left;
+}
+
+.mask-half-2 {
+  mask-size: 100%;
+  mask-position: right;
+}
+
+.mask {
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.rating input:focus-visible {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-0.125em);
+}

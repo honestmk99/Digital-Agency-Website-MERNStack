@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -8,6 +7,7 @@ import About from './pages/About'
 import MainLayout from './components/layout/MainLayout';
 import Store from './pages/Store';
 import Details from './pages/other/Details';
+import { Cart } from './pages/Cart';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
           <Route path="details" element={<Details />} />
+          <Route path="cart" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>
