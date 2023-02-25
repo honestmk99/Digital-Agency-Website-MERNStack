@@ -60,129 +60,117 @@ const Footer = () => {
     }, []);
 
     return (
-        <div>
-            <div className='footer bg-[#0d1245]'>
-                <div className='grid justify-center justify-items-center w-full shadow mb-[20px]'>
-                    <div className='font-sm text-[#c471f5]'>NEWSLETTER FOR G'S</div>
-                    <div className="font-sm text-[#c471f5] font-bold  text-[40px] my-[20px]">WEEKLY KNOWLEDGE EXCLUSIVELY FOR G'S.</div>
-                    <div className="w-72 my-[15px]">
-                        <Input color="purple" label="Email" icon={<i className="fas fa-heart" />} />
+        <div className='text-third font-ft-primary'>
+            <div className='my-16 flex flex-col gap-12 items-center justify-center max-w-[160rem] m-auto tracking-wider'>
+                <h1 className='uppercase font-ft-secondary text-3xl'>newsletters for g's</h1>
+                <h1 className='uppercase text-[7rem]'>WEEKLY KNOWLEDGE EXCLUSIVELY FOR G'S.</h1>
+                <div className='relative'>
+                    <input type='email' className='bg-primary p-8 text-third border border-third text-4xl placeholder:text-third w-[50rem]' placeholder='Email' />
+                    <h1 className='absolute top-10 bottom-10 right-10 text-4xl'>→</h1>
+                </div>
+            </div>
+            <div className='py-16 border-y border-y-third'>
+                <div className='px-20 m-auto max-w-[160rem] grid grid-cols-2'>
+                    <div className='flex flex-col gap-12'>
+                        <h1 className='text-5xl'>ABOUT US</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>About Us</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Refund Policy</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Privacy Policy</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Terms of Service</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Logal Notice</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Contact Information</h1>
+                    </div>
+                    <div className='flex flex-col gap-12'>
+                        <h1 className='text-5xl'>Our Mission</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100 leading-[4rem] tracking-wider'>Matrix AI Movement empowers individuals with digital tools and resources to thrive. We offer courses and job opportunities in tech and marketing, encouraging personal growth and development to become your own boss.</h1>
+                    </div>
+
+                </div>
+                <div className='flex justify-center justify-items-center mt-10'>
+                    <div
+                        className="px-4 py-2 bg-none rounded-md text-third"
+                    >
+                        <InstagramIcon />
+                    </div>
+                    <div
+                        className="px-4 py-2 bg-none rounded-md"
+                    >
+                        <TwitterIcon />
+                    </div>
+                    <div
+                        className="px-4 py-2 bg-none rounded-md"
+                    >
+                        <DiscordIcon />
                     </div>
                 </div>
-                <div className='about border-t border-[#1b1a53]'>
-                    <div className='flex aboutmission mb-[30px] mt-[20px]'>
-                        <div className='aboutus w-[50%]'>
-                            <div className='text-[20px] text-[#c471f5] mb-[20px] ml-[80px]'>ABOUT US</div>
-                            <div className='aboutlist grid ml-[80px]'>
-                                {listData.map((tab, idx) => {
-                                    return (
-                                        <Link
-                                            to={tab.path}
-                                            key={idx}
-                                            className={"text-[#7f4db2] text-sm hover:text-indigo-200 mb-[10px] mr-[30px]"}
-                                        >
-                                            {tab.label}
-                                        </Link>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                        <div className='mission w-[50%]'>
-                            <div className='text-[20px] text-[#c471f5] mb-[20px]'>Our Mission</div>
-                            <div className='text-[#7f4db2] text-[15px] mr-[80px]'>
-                                At Creatus Marketing Agency, our mission is to empower individuals with the necessary tools and resources to thrive in the ever-changing digital landscape. We strive to create a community of like-minded individuals who share a passion for personal growth and development. Our ecommerce store offers a wide range of courses and information to help individuals achieve their goals and enhance their skills. In addition, our agency provides free training and job opportunities in various industries, including tech and marketing. We believe that by offering these resources and opportunities, we can help individuals escape the constraints of traditional employment and become their own bosses.
-                            </div>
-                        </div>
-                    </div>
-                    <div className='flex justify-center justify-items-center mb-[40px] sociallink'>
+            </div>
+            <div className='px-20 m-auto max-w-[160rem] flex items-center'>
+                <div className='pb-[50px]'>
+                    <span className='copyright text-[#7f4db2] text-[13px] mt-[10px] ml-[50px]'>
+                        @ 2023,
                         <a
-                            href="javascript:void(0)"
-                            className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                            href="/"
+                            className="text-[#7f4db2] text-[13px] bg-none rounded-md shadow hover:text-indigo-200 "
                         >
-                            <InstagramIcon />
+                            CreatusMarketingAgency
                         </a>
-                        <a
-                            href="javascript:void(0)"
-                            className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
-                        >
-                            <TwitterIcon />
-                        </a>
-                        <a
-                            href="javascript:void(0)"
-                            className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
-                        >
-                            <DiscordIcon />
-                        </a>
-                    </div>
+                    </span>
                 </div>
-                <div className='payment border-t border-[#1b1a53]' >
-                    <div className='flex justify-center justify-items-center mt-[30px] payment' >
-                        <a
-                            href="javascript:void(0)"
-                            className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
-                        >
-                            <AmexIcon />
-                        </a>
-                        <a
-                            href="javascript:void(0)"
-                            className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
-                        >
-                            <AppleIcon />
-                        </a>
-                        <a
-                            href="javascript:void(0)"
-                            className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
-                        >
-                            <MasterIcon />
-                        </a>
-                        <a
-                            href="javascript:void(0)"
-                            className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
-                        >
-                            <PaypalIcon />
-                        </a>
-                        <a
-                            href="javascript:void(0)"
-                            className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
-                        >
-                            <VisaIcon />
-                        </a>
-                    </div>
-                    <div className='pb-[50px]'>
-                        <span className='copyright text-[#7f4db2] text-[13px] mt-[10px] ml-[50px]'>
-                            @ 2023,
-                            <a
-                                href="/"
-                                className="text-[#7f4db2] text-[13px] bg-none rounded-md shadow hover:text-indigo-200 "
-                            >
-                                CreatusMarketingAgency
-                            </a>
-                        </span>
-                    </div>
+                <div className='flex justify-center justify-items-center mt-[30px] payment' >
+                    <a
+                        // href="javascript:void(0)"
+                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                    >
+                        <AmexIcon />
+                    </a>
+                    <a
+                        // href="javascript:void(0)"
+                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                    >
+                        <AppleIcon />
+                    </a>
+                    <a
+                        // href="javascript:void(0)"
+                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                    >
+                        <MasterIcon />
+                    </a>
+                    <a
+                        // href="javascript:void(0)"
+                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                    >
+                        <PaypalIcon />
+                    </a>
+                    <a
+                        // href="javascript:void(0)"
+                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                    >
+                        <VisaIcon />
+                    </a>
                 </div>
-                {isVisible && (
+                {/* {isVisible && (
                     <button
                         onClick={scrollToTop}
                         type="button"
                         data-te-ripple-init
                         data-te-ripple-color="light"
-                        class="fixed bottom-5 right-5 inline-block rounded-full bg-danger p-2 uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)]">
+                        className="fixed bottom-5 right-5 inline-block rounded-full bg-danger p-2 uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#dc4c64] transition duration-150 ease-in-out hover:bg-danger-600 hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-danger-600 focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)]">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
                             fill="currentColor"
                             strokeWidth="2.5"
                             stroke="currentColor"
-                            class="h-4 w-4">
+                            className="h-4 w-4">
                             <path
-                                fill-rule="evenodd"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
+                                fillRule="evenodd"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
                                 d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"
-                                clip-rule="evenodd" />
+                                clipRule="evenodd" />
                         </svg>
                     </button>
-                )}
+                )} */}
             </div>
         </div>
     )

@@ -67,13 +67,12 @@ const IntroCard = (props) => {
                 MARKET VALUE :$1.600
               </div>
               <Button
-                fullWidth
                 onClick={cartClick}
-                className="bg-transparent text-[red] border-[1px] border-[red] mb-[10px]"
+                className="bg-transparent text-[red] border-[1px] border-[red] mb-[10px] w-full"
               >
                 Add to cart
               </Button>
-              <Button fullWidth className="bg-[#a4ef7d] text-[#0d1245]">
+              <Button className="bg-[#a4ef7d] text-[#0d1245] w-full">
                 But it now
               </Button>
               <div className="flex justify-between">

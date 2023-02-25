@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import {
   Menu,
   MenuHandler,
@@ -41,13 +41,13 @@ import { supabase } from '../connectSupabase';
 const Store = () => {
   const [productData, setProductData] = useState();
   const getProductData = async () => {
-        await supabase
-          .from('products')
-          .select(`id, prod_name, created_at, first_price, current_price, img_url`)
-          .then((res) => {
-            res.data && setProductData(res.data);
-          });
-      };
+    await supabase
+      .from('products')
+      .select(`id, prod_name, created_at, first_price, current_price, img_url`)
+      .then((res) => {
+        res.data && setProductData(res.data);
+      });
+  };
   useEffect(() => {
     getProductData()
   }, [])
@@ -73,12 +73,12 @@ const Store = () => {
           <button className='text-[red] pt-[20px]'>Filter</button>
           <div className='flex items-center justify-between'>
             <label className="text-[#c471f5] pr-[10px]">Sort by : </label>
-            <Fragment className="">
+            {/* <Fragment className="">
               <Menu placement="bottom">
                 <MenuHandler>
-                  <Button variant="" className='bg-transparent shadow-none hover:shadow-none text-[#c471f5] flex items-center justify-between'>Sort &nbsp;
-                    <svg width="10px" aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
-                      <path fill-rule="evenodd" clipRule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="#c471f5">
+                  <Button className='bg-transparent shadow-none hover:shadow-none text-[#c471f5] flex items-center justify-between'>Sort &nbsp;
+                    <svg width="10px" aria-hidden="true" focusable="false" className="icon icon-caret" viewBox="0 0 10 6">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="#c471f5">
                       </path></svg></Button>
                 </MenuHandler>
                 <MenuList>
@@ -92,7 +92,7 @@ const Store = () => {
                   <MenuItem>Date, new to old</MenuItem>
                 </MenuList>
               </Menu>
-            </Fragment>
+            </Fragment> */}
             <div className='text-[#c471f5] pl-[10px]'>
               Total : 6 products
             </div>
@@ -100,12 +100,12 @@ const Store = () => {
         </div>
         <div className='grid grid-cols-4'>
           {productData && productData.length > 0 &&
-          productData.map((data, ind) => {
-            console.log("sdfsdf", data)
-            return (
-              <Card key={ind} prod_name={data.prod_name} first_price={data.first_price} current_price={data.current_price} img_url={data.img_url} className='w-[95%] mb-[30px] shadow-[0px_0px_8px_1px_#c471f5]' />
-            )
-          })}
+            productData.map((data, ind) => {
+              console.log("sdfsdf", data)
+              return (
+                <Card key={ind} prod_name={data.prod_name} first_price={data.first_price} current_price={data.current_price} img_url={data.img_url} className='w-[95%] mb-[30px] shadow-[0px_0px_8px_1px_#c471f5]' />
+              )
+            })}
         </div>
       </div>
       <div className='flex items-center justify-center w-full pb-[60px] '>
@@ -118,11 +118,11 @@ const Store = () => {
             Ready to take your life to the next level? Change your life today with our products and agency, providing you with the tools, training, and job opportunities you need to succeed.
           </div>
           <div className='flex items-center justify-center pt-[40px]'>
-          <Button variant="filled" className='bg-[#a4ef7d] text-[#0d1245] font-thin px-[60px] mx-[10px]'>JOIN NOW</Button>
-          <Button variant="filled" className='bg-[#a4ef7d] text-[#0d1245] font-thin px-[60px] mx-[10px]'>ABOUT US</Button>
+            <Button className='bg-[#a4ef7d] text-[#0d1245] font-thin px-[60px] mx-[10px]'>JOIN NOW</Button>
+            <Button className='bg-[#a4ef7d] text-[#0d1245] font-thin px-[60px] mx-[10px]'>ABOUT US</Button>
+          </div>
         </div>
       </div>
-    </div>
     </div >
   )
 }

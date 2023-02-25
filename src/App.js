@@ -8,21 +8,25 @@ import MainLayout from './components/layout/MainLayout';
 import Store from './pages/Store';
 import Details from './pages/other/Details';
 import { Cart } from './pages/Cart';
+import { Products } from './pages/Products';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index path="/" element={<Home />} />
-          <Route path="store" element={<Store />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="about" element={<About />} />
-          <Route path="details" element={<Details />} />
-          <Route path="cart" element={<Cart />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className='bg-primary'>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index path="/" element={<Home />} />
+            <Route path="store" element={<Store />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="about" element={<About />} />
+            <Route path="details" element={<Details />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="product" element={<Products />} />
+          </Route>
+        </Routes>
+      </BrowserRouter >
+    </div>
   );
 }
 

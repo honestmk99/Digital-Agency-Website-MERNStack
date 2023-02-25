@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
 
 .quantity-input::-webkit-outer-spin-button,
 .quantity-input::-webkit-inner-spin-button {
@@ -23,10 +32,10 @@
   width: 3rem;
 }
 
-.rating-lg input {
-  height: 1.5rem;
-  width: 1.5rem;
-}
+/* .rating-lg input {
+  height: 1.2rem;
+  width: 1.2rem;
+} */
 
 .rating input {
   appearance: none;

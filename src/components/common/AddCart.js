@@ -9,7 +9,7 @@ const AddCart = () => {
       <div className="flex items-center justify-between">
         <div className="text-[#7f4db2] flex items-center justify-center">
           <svg
-            class=" w-3 h-3 icon icon-checkmark color-foreground-text"
+            className=" w-3 h-3 icon icon-checkmark color-foreground-text"
             aria-hidden="true"
             focusable="false"
             xmlns="http://www.w3.org/2000/svg"
@@ -17,8 +17,8 @@ const AddCart = () => {
             fill="none"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z"
               fill="currentColor"
             ></path>
@@ -53,15 +53,21 @@ const AddCart = () => {
           The Ultimate Learning Bundle: 1TB of Paid Courses Worth $200K+
         </div>
       </div>
-      
+
       <div className="flex flex-col items-center justify-center">
         <Button
-          fullWidth
-          className="bg-transparent text-[red] border-[1px] border-[red] mb-[10px]"
+          className="bg-transparent text-[red] border-[1px] border-[red] mb-[10px] w-full"
+          onClick={(e) => {
+            //   setSlide(true)
+            e.preventDefault();
+            console.log('tttttt')
+            window.location.herf = "/cart";
+            // navigate("/cart");
+          }}
         >
           View my cart
         </Button>
-        <Button fullWidth className="bg-[#a4ef7d] text-[#0d1245]">
+        <Button className="bg-[#a4ef7d] text-[#0d1245] w-full">
           Check out
         </Button>
         <Link to={`/store`} className="text-[red] underline">

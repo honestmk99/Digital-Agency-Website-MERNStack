@@ -1,5 +1,7 @@
-import { Button } from "@material-tailwind/react";
+// import { Button } from "@material-tailwind/react";
 import Img from "../../assets/img/products/pro1-1.png";
+
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
   const { prod_name, first_price, current_price } = props;
@@ -28,7 +30,7 @@ const Card = (props) => {
   return (
     <a
       className="w-[95%] mb-[30px] shadow-[0px_0px_8px_1px_#c471f5] flex flex-col content-between relative"
-      href="/detail"
+      href="/product"
     // onClick={() => {
     //   setDetail(true)
     //   console.log('WWWWWWW')
@@ -48,21 +50,14 @@ const Card = (props) => {
         </div>
 
         <div className="flex justify-center content-between">
-          <Button
-            onClick={(e) => {
-              //   setSlide(true)
-              //   console.log('tttttt')
-              e.preventDefault();
-              window.location.herf = "/";
-              // navigate("/cart");
-            }}
-            fullWidth
-            className="bg-transparent w-[80%] text-[#c471f5] border-[1px] border-[#c471f5] mb-[10px] pl-[20px]  bottom-[5px] "
+          <Link
+
+            to="/cart"
+            className="bg-transparent w-[80%] text-[#c471f5] border-[1px] border-[#c471f5] mb-[10px] pl-[20px]  bottom-[5px]"
           >
             Add to cart
-          </Button>
-          <Button
-            fullWidth
+          </Link>
+          {/* <Button
             onClick={(e) => {
               e.preventDefault();
 
@@ -71,7 +66,7 @@ const Card = (props) => {
             className="bg-transparent w-[80%] text-[red] border-[1px] border-[red] mb-[10px] absolute"
           >
             Add to cart
-          </Button>
+          </Button> */}
         </div>
       </div>
     </a>
