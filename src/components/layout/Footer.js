@@ -63,26 +63,26 @@ const Footer = () => {
         <div className='text-third font-ft-primary'>
             <div className='my-16 flex flex-col gap-12 items-center justify-center max-w-[160rem] m-auto tracking-wider'>
                 <h1 className='uppercase font-ft-secondary text-3xl'>newsletters for g's</h1>
-                <h1 className='uppercase text-[7rem]'>WEEKLY KNOWLEDGE EXCLUSIVELY FOR G'S.</h1>
+                <h1 className='uppercase text-center text-[7rem] max-[1200px]:text-5xl max-sm:text-3xl'>WEEKLY KNOWLEDGE EXCLUSIVELY FOR G'S.</h1>
                 <div className='relative'>
-                    <input type='email' className='bg-primary p-8 text-third border border-third text-4xl placeholder:text-third w-[50rem]' placeholder='Email' />
-                    <h1 className='absolute top-10 bottom-10 right-10 text-4xl'>→</h1>
+                    <input type='email' className='bg-primary p-8 text-third border border-third text-4xl placeholder:text-third w-[50rem] max-lg:w-[30rem] max-lg:p-4 max-lg:text-2xl' placeholder='Email' />
+                    <h1 className='absolute top-10 bottom-10 right-10 text-4xl max-lg:top-4 max-lg:bottom-4 max-lg:right-4'>→</h1>
                 </div>
             </div>
             <div className='py-16 border-y border-y-third'>
-                <div className='px-20 m-auto max-w-[160rem] grid grid-cols-2'>
-                    <div className='flex flex-col gap-12'>
-                        <h1 className='text-5xl'>ABOUT US</h1>
-                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>About Us</h1>
-                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Refund Policy</h1>
-                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Privacy Policy</h1>
-                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Terms of Service</h1>
-                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Logal Notice</h1>
-                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100'>Contact Information</h1>
+                <div className='px-40 m-auto max-w-[160rem] grid grid-cols-2 max-md:px-5'>
+                    <div className='flex flex-col gap-12 max-lg:gap-6'>
+                        <h1 className='text-5xl max-md:text-3xl'>ABOUT US</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100 max-md:text-xl'>About Us</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100 max-md:text-xl'>Refund Policy</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100 max-md:text-xl'>Privacy Policy</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100 max-md:text-xl'>Terms of Service</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100 max-md:text-xl'>Logal Notice</h1>
+                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100 max-md:text-xl'>Contact Information</h1>
                     </div>
-                    <div className='flex flex-col gap-12'>
-                        <h1 className='text-5xl'>Our Mission</h1>
-                        <h1 className='text-3xl font-ft-secondary cursor-pointer brightness-75 hover:underline hover:brightness-100 leading-[4rem] tracking-wider'>Matrix AI Movement empowers individuals with digital tools and resources to thrive. We offer courses and job opportunities in tech and marketing, encouraging personal growth and development to become your own boss.</h1>
+                    <div className='flex flex-col gap-12 max-md:gap-3'>
+                        <h1 className='text-5xl max-md:text-3xl'>Our Mission</h1>
+                        <h1 className='text-3xl font-ft-secondary brightness-75 hover:brightness-100 leading-[4rem] tracking-wider max-md:text-xl'>Matrix AI Movement empowers individuals with digital tools and resources to thrive. We offer courses and job opportunities in tech and marketing, encouraging personal growth and development to become your own boss.</h1>
                     </div>
 
                 </div>
@@ -104,45 +104,45 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='px-20 m-auto max-w-[160rem] flex items-center font-ft-secondary py-12'>
-                <div className='flex'>
+            <div className='px-20 m-auto max-w-[160rem] flex items-center font-ft-secondary py-12 gap-28 max-md:px-5 max-md:flex-col max-md:gap-10'>
+                <div className='flex items-center max-md:text-xl'>
                     <div className='text-third'>
                         <h1>@ 2023,</h1>
                     </div>
                     <div
-                        className="text-third bg-none ml-4 hover:underline"
+                        className="text-third ml-4 hover:underline"
                     >
                         <h1>CreatusMarketingAgency</h1>
                     </div>
                 </div>
-                <div className='flex justify-center justify-items-center' >
+                <div className='flex justify-center justify-items-center gap-12 max-md:gap-6' >
                     <a
                         // href="javascript:void(0)"
-                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                        className="text-gray-800 bg-none rounded-md shadow "
                     >
                         <AmexIcon />
                     </a>
                     <a
                         // href="javascript:void(0)"
-                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                        className="text-gray-800 bg-none rounded-md shadow "
                     >
                         <AppleIcon />
                     </a>
                     <a
                         // href="javascript:void(0)"
-                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                        className="text-gray-800 bg-none rounded-md shadow "
                     >
                         <MasterIcon />
                     </a>
                     <a
                         // href="javascript:void(0)"
-                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                        className="text-gray-800 bg-none rounded-md shadow "
                     >
                         <PaypalIcon />
                     </a>
                     <a
                         // href="javascript:void(0)"
-                        className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "
+                        className="text-gray-800 bg-none rounded-md shadow "
                     >
                         <VisaIcon />
                     </a>

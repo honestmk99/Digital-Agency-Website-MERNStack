@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import introImg from '../../assets/img/intro-img.png'
+import { Sidebar } from '../Navbar'
 
 const tabsData = [
     {
@@ -97,7 +98,7 @@ const Header = () => {
 
     return (
         <>
-            <div id='site-header' className='fixed w-full bg-primary'>
+            <div id='site-header' className='fixed w-full bg-primary z-99999'>
                 <div className='bg-secondary cursor-pointer text-primary group uppercase hover:bg-secondary-hv font-ft-primary text-[2rem] p-2'>
                     <div className='max-w-[160rem] m-auto'>
                         <div className='flex justify-center items-center gap-2'>
@@ -108,8 +109,47 @@ const Header = () => {
                 </div>
                 <div className='max-w-[160rem] m-auto'>
                     <div className='grid grid-cols-4 gap-5 py-8 px-20'>
-                        <div className='col-span-1 justify-self-start cursor-pointer flex items-center'>
-                            <FontAwesomeIcon icon={faSearch} className="text-[#7f4db2]" />
+                        <div className='grid grid-cols-1 max-lg:grid-cols-2 col-span-1 justify-self-start gap-4'>
+                            {/* <div className='bg-white' id="outer-container">
+                                <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+                            </div> */}
+                            <button
+                                className="text-gray-700 rounded-md outline-none focus:border-gray-400 col-span-1 justify-self-center hidden max-lg:block"
+                                onClick={() => setNavbar(!navbar)}
+                            >
+                                {navbar ? (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6 text-[#7f4db2]"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                ) : (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6 text-[#7f4db2]"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth={2}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M4 6h16M4 12h16M4 18h16"
+                                        />
+                                    </svg>
+                                )}
+                            </button>
+                            <div className='col-span-1 justify-self-center cursor-pointer flex items-center'>
+                                <FontAwesomeIcon icon={faSearch} className="text-[#7f4db2]" />
+                            </div>
                         </div>
                         <div className='col-span-2 justify-self-center cursor-pointer'>
                             <img src={introImg} alt="intro-img" width="70px" className='rounded-[50px]' />
@@ -122,7 +162,7 @@ const Header = () => {
                                 <h1 className='text-base font-bold'>1</h1>
                             </div>
                         </div>
-                        <div className='col-start-2 col-span-2 grid grid-cols-4 gap-5 justify-self-center mt-4'>
+                        <div className='col-start-2 col-span-2 grid grid-cols-4 gap-5 justify-self-center mt-4 max-lg:hidden'>
                             <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer' onClick={() => setUrl('home')}><h1>Home</h1></div>
                             <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer' onClick={() => setUrl('store')}><h1>Store</h1></div>
                             <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer' onClick={() => setUrl('contact')}><h1>Contact</h1></div>
@@ -131,6 +171,9 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            {/* <div className='relative'>
+                <div className='b border-t-4 visible transition-all duration-200 ease-in-out absolute'>HHHHHHHHHHHHHHHH</div>
+            </div> */}
             {/* <div className=' fixed w-full' id='site-header'>
                 <div className='max-w-[160rem] m-auto'>
                     <div className='flex items-center justify-between'>

@@ -1,11 +1,19 @@
-const withMT = require("@material-tailwind/react/utils/withMT");
+/** @type {import('tailwindcss').Config} */
+// const withMT = require("@material-tailwind/react/utils/withMT");
 
-module.exports = withMT({
+module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
       'ft-primary': ['Righteous', 'sans-serif'],
       'ft-secondary': ["Merriweather Sans", 'sans-serif']
+    },
+    screens: {
+      sm: '450px',
+      md: '600px',
+      lg: '800px',
+      xl: '1200px',
+      '2xl': '1400px'
     },
     extend: {
       colors: {
@@ -18,7 +26,8 @@ module.exports = withMT({
       boxShadow: {
         'bs-primary': '0px 3px 7px 0px #c471f5',
         'bs-secondary': '0px 0px 8px -2px #c471f5',
-        'bs-hover': '0px 3px 7px 0px #c471f5, 0px 0px 0px 2px #c471f5'
+        'bs-hover': '0px 3px 7px 0px #c471f5, 0px 0px 0px 2px #c471f5',
+        'bs-rhover': '0px 0px 0px 2px #ee2222, 0px 3px 7px 0px #c471f5'
       },
 
       backgroundImage: {
@@ -27,7 +36,7 @@ module.exports = withMT({
     },
   },
   plugins: [],
-});
+};
 
 // /** @type {import('tailwindcss').Config} */
 // module.exports = {

@@ -12,7 +12,7 @@ import { Products } from './pages/Products';
 
 function App() {
   return (
-    <div className='bg-primary relative'>
+    <div className='bg-primary relative overflow-hidden'>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
