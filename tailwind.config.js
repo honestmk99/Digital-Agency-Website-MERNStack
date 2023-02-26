@@ -16,8 +16,14 @@ module.exports = withMT({
         'font-primary': 'rgb(196,113,245)',
       },
       boxShadow: {
-        'bs-primary': '0px 3px 4px -2px #c471f5'
-      }
+        'bs-primary': '0px 3px 7px 0px #c471f5',
+        'bs-secondary': '0px 0px 8px -2px #c471f5',
+        'bs-hover': '0px 3px 7px 0px #c471f5, 0px 0px 0px 2px #c471f5'
+      },
+
+      backgroundImage: {
+        'store': 'url(/src/assets/img/store-img.png)'
+      },
     },
   },
   plugins: [],

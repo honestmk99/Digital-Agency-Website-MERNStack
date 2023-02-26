@@ -7,6 +7,7 @@ import discordImg from "../assets/img/discord.png";
 import IntroCard from "../components/common/IntroCard";
 import EscapeStep from "../components/common/EscapeStep";
 import { Rating } from "../components/Rating";
+import { Project } from "../components/common/Project";
 
 const escapeData = [
   {
@@ -32,6 +33,7 @@ const Home = () => {
 
   return (
     <div className="pt-32 max-w-[160rem] m-auto px-40 text-third font-ft-primary">
+      <Project />
       <h1 className="py-40 text-8xl">The Red Pill</h1>
       <div className="grid grid-cols-2 gap-24">
         <div>

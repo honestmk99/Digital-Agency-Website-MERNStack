@@ -1,4 +1,4 @@
-export const Rating = ({ type }) => {
+export const Rating = () => {
     return (
         <div className="rating rating-lg rating-half">
             <input type="radio" className="bg-yellow-500 mask mask-star-2 mask-half-1 w-8 h-8" />

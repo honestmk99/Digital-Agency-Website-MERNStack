@@ -104,19 +104,18 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='px-20 m-auto max-w-[160rem] flex items-center'>
-                <div className='pb-[50px]'>
-                    <span className='copyright text-[#7f4db2] text-[13px] mt-[10px] ml-[50px]'>
-                        @ 2023,
-                        <a
-                            href="/"
-                            className="text-[#7f4db2] text-[13px] bg-none rounded-md shadow hover:text-indigo-200 "
-                        >
-                            CreatusMarketingAgency
-                        </a>
-                    </span>
+            <div className='px-20 m-auto max-w-[160rem] flex items-center font-ft-secondary py-12'>
+                <div className='flex'>
+                    <div className='text-third'>
+                        <h1>@ 2023,</h1>
+                    </div>
+                    <div
+                        className="text-third bg-none ml-4 hover:underline"
+                    >
+                        <h1>CreatusMarketingAgency</h1>
+                    </div>
                 </div>
-                <div className='flex justify-center justify-items-center mt-[30px] payment' >
+                <div className='flex justify-center justify-items-center' >
                     <a
                         // href="javascript:void(0)"
                         className="px-4 py-2 text-gray-800 bg-none rounded-md shadow "

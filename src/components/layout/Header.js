@@ -28,6 +28,7 @@ const Header = () => {
     const [navbar, setNavbar] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const [isSearch, setIsSearch] = useState(false);
+    const [url, setUrl] = useState('');
 
     useEffect(() => {
         const doc = document.documentElement;
@@ -71,11 +72,28 @@ const Header = () => {
                 prevDirection = direction;
             }
         };
-
         window.addEventListener('scroll', checkScroll);
-
         return () => window.removeEventListener('scroll', checkScroll);
     }, []);
+
+    useEffect(() => {
+        switch (url) {
+            case 'home':
+                window.location.href = '/'
+                return;
+            case 'store':
+                window.location.href = '/store'
+                return;
+            case 'contact':
+                window.location.href = '/contact'
+                return;
+            case 'about':
+                window.location.href = '/about'
+                return;
+            default:
+                break;
+        }
+    }, [url])
 
     return (
         <>
@@ -104,11 +122,11 @@ const Header = () => {
                                 <h1 className='text-base font-bold'>1</h1>
                             </div>
                         </div>
-                        <div className='col-start-2 col-span-2 grid grid-cols-4 gap-5 justify-self-center'>
-                            <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer'><h1>Home</h1></div>
-                            <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer'><h1>Store</h1></div>
-                            <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer'><h1>Contact</h1></div>
-                            <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer'><h1>About Us</h1></div>
+                        <div className='col-start-2 col-span-2 grid grid-cols-4 gap-5 justify-self-center mt-4'>
+                            <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer' onClick={() => setUrl('home')}><h1>Home</h1></div>
+                            <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer' onClick={() => setUrl('store')}><h1>Store</h1></div>
+                            <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer' onClick={() => setUrl('contact')}><h1>Contact</h1></div>
+                            <div className='text-third font-semibold hover:underline hover:brightness-150 cursor-pointer' onClick={() => setUrl('about')}><h1>About Us</h1></div>
                         </div>
                     </div>
                 </div>

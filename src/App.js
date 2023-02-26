@@ -12,7 +12,7 @@ import { Products } from './pages/Products';
 
 function App() {
   return (
-    <div className='bg-primary'>
+    <div className='bg-primary relative'>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
@@ -26,6 +26,10 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter >
+      {/* <div className='absolute'>
+        <div className='h-[20rem]'></div>
+        <div className='bg-third opacity-60'>AAAA</div>
+      </div> */}
     </div>
   );
 }
