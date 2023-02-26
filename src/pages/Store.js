@@ -55,9 +55,9 @@ const Store = () => {
 
   return (
     <>
-      <div className='max-w-[160rem] m-auto text-third font-ft-primary pt-80 px-20 mb-40'>
-        <h1 className='text-8xl py-16'>Products</h1>
-        <div className='grid grid-cols-4 gap-12'>
+      <div className='max-w-[160rem] m-auto text-third font-ft-primary px-20 mb-40 max-sm:px-5 max-sm:mb-20'>
+        <h1 className='text-8xl py-16 max-md:text-6xl'>Products</h1>
+        <div className='grid grid-cols-4 gap-12 max-lg:grid-cols-3 max-md:grid-cols-1'>
           <Project />
           <Project />
           <Project />
@@ -67,20 +67,25 @@ const Store = () => {
           <Project />
         </div>
       </div>
-      <div className="min-h-[56rem] relative flex">
-        <div className='h-full w-full left-0 top-0 absolute overflow-hidden'>
-          <img src={Store_img} alt="store-img" className='object-cover object-center absodlute w-full' />
+      {/* background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */}
+      <div className="min-h-[56rem] relative flex items-center justify-center max-lg:min-h-[40rem] max-md:min-h-[30rem]">
+        <div className="h-full w-full left-0 top-0 absolute overflow-hidden block ">
+          <img src={Store_img} alt="store-img" className='absolute max-w-full block object-cover object-center' />
         </div>
-        <div className='flex items-center justify-center z-50 w-full'>
-          <div className='bg-primary text-third flex items-center justify-center flex-col gap-12 max-w-[100rem] p-20'>
-            <h1 className='uppercase text-7xl font-ft-primary'>change your life today!</h1>
-            <h2 className='font-ft-secondary text-center text-4xl leading-[4rem]'>Ready to take your life to the next level? Change your life today with our products and agency, providing you with the tools, training, and job opportunities you need to succeed.</h2>
-            <div className='flex gap-8 text-primary'>
-              <div className='cursor-pointer rounded-2xl px-20 py-8 bg-secondary'>
-                <h1 className='uppercase font-ft-secondary'>join now</h1>
-              </div>
-              <div className='cursor-pointer rounded-2xl px-20 py-8 bg-secondary'>
-                <h1 className='uppercase font-ft-secondary'>about us</h1>
+        <div className='flex items-center justify-center'>
+          <div className='flex items-center justify-center z-50 w-full'>
+            <div className='bg-primary text-third flex items-center justify-center flex-col gap-12 max-w-[100rem] p-20 max-xl:max-w-[50rem] max-xl:p-10 max-md:gap-4 max-md:p-4'>
+              <h1 className='uppercase text-7xl font-ft-primary text-center max-xl:text-5xl'>change your life today!</h1>
+              <h2 className='font-ft-secondary text-center text-4xl leading-[4rem] max-xl:text-2xl'>Ready to take your life to the next level? Change your life today with our products and agency, providing you with the tools, training, and job opportunities you need to succeed.</h2>
+              <div className='flex gap-8 text-primary'>
+                <div className='cursor-pointer rounded-2xl px-20 py-8 bg-secondary max-xl:py-4 max-md:px-10'>
+                  <h1 className='uppercase font-ft-secondary max-md:text-xl'>join now</h1>
+                </div>
+                <div className='cursor-pointer rounded-2xl px-20 py-8 bg-secondary max-xl:py-4 max-md:px-10'>
+                  <h1 className='uppercase font-ft-secondary max-md:text-xl'>about us</h1>
+                </div>
               </div>
             </div>
           </div>

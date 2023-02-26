@@ -12,6 +12,12 @@ export const AddPanel = () => {
         }
     }
 
+    const goCart = () => {
+        console.log('cartttt')
+        window.localStorage.count = 3;
+        window.location.href = '/cart'
+    }
+
     return (
         <>
             <h1 className="text-7xl max-[1200px]:min-[850px]:text-5xl max-[600px]:text-5xl">The Ultimate Bundle: 1TB of Paid Courses Worth $200K+</h1>
@@ -43,7 +49,7 @@ export const AddPanel = () => {
                 </div>
             </div>
             <div className="max-w-[44rem] flex flex-col gap-4">
-                <div className="border border-red-800 text-red-800 w-full rounded-2xl font-ft-secondary text-center py-4 hover:shadow-bs-rhover cursor-pointer box-border shadow-bs-primary max-[1200px]:min-[850px]:min-[850px]:py-2">
+                <div className="border border-red-800 text-red-800 w-full rounded-2xl font-ft-secondary text-center py-4 hover:shadow-bs-rhover cursor-pointer box-border shadow-bs-primary max-[1200px]:min-[850px]:min-[850px]:py-2" onClick={() => goCart()}>
                     <h1>Add to cart</h1>
                 </div>
                 <div className="border border-secondary text-primary w-full rounded-2xl font-ft-secondary text-center py-4 cursor-pointer box-border shadow-bs-primary bg-secondary max-[1200px]:min-[850px]:py-2">

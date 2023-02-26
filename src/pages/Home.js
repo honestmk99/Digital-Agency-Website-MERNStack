@@ -64,9 +64,9 @@ const Home = () => {
       <div className="flex items-center justify-center flex-col gap-5">
         <h1 className="uppercase font-ft-secondary">the way to</h1>
         <h1 className="uppercase text-8xl max-[1200px]:text-6xl">escape the matrix</h1>
-        <Step />
-        <Step />
-        <Step />
+        <Step title={'Step1'} text={'Access our e-commerce store for powerful courses on psychology, crypto, IT, and more, designed to help you develop skills and knowledge to thrive in the modern digital world.'} />
+        <Step title={'Step2'} text={'Access our e-commerce store for powerful courses on psychology, crypto, IT, and more, designed to help you develop skills and knowledge to thrive in the modern digital world.'} />
+        <Step title={'Step3'} text={'Access our e-commerce store for powerful courses on psychology, crypto, IT, and more, designed to help you develop skills and knowledge to thrive in the modern digital world.'} />
       </div>
     </div>
     // <div className="">

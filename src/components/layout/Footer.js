@@ -63,7 +63,7 @@ const Footer = () => {
         <div className='text-third font-ft-primary'>
             <div className='my-16 flex flex-col gap-12 items-center justify-center max-w-[160rem] m-auto tracking-wider'>
                 <h1 className='uppercase font-ft-secondary text-3xl'>newsletters for g's</h1>
-                <h1 className='uppercase text-center text-[7rem] max-[1200px]:text-5xl max-sm:text-3xl'>WEEKLY KNOWLEDGE EXCLUSIVELY FOR G'S.</h1>
+                <h1 className='uppercase text-center text-[7rem] max-xl:text-5xl max-md:text-3xl'>WEEKLY KNOWLEDGE EXCLUSIVELY FOR G'S.</h1>
                 <div className='relative'>
                     <input type='email' className='bg-primary p-8 text-third border border-third text-4xl placeholder:text-third w-[50rem] max-lg:w-[30rem] max-lg:p-4 max-lg:text-2xl' placeholder='Email' />
                     <h1 className='absolute top-10 bottom-10 right-10 text-4xl max-lg:top-4 max-lg:bottom-4 max-lg:right-4'>→</h1>
