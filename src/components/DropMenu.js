@@ -47,7 +47,7 @@ export const Dropdown = ({
         { value: "bbs", label: "BBS", type: "wheelType" },
     ];
 
-    console.log(allList)
+    // console.log(allList)
 
     useEffect(() => {
         if (showMenu) {

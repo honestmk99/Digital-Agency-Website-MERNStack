@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Dropdown } from "../components/DropMenu"
+import { Checkout } from "../components/Checkout";
+// import { Countries } from "../components/Countries";
+// import { Dropdown } from "../components/DropMenu"
 
 export const Payment = () => {
     const [payment, setPayment] = useState("paypal");
@@ -22,7 +24,8 @@ export const Payment = () => {
                             <input type='text' placeholder="First Name" className="placeholder:text-third p-4 text-4xl bg-transparent border border-third" />
                             <input type='text' placeholder="Last Name" className="placeholder:text-third p-4 text-4xl bg-transparent border border-third" />
                         </div>
-                        <Dropdown type='engin' placeHolder='Country' specifications={[]} />
+                        {/* <Countries /> */}
+                        {/* <Dropdown type='engin' placeHolder='Country' specifications={[]} /> */}
                         <input type='text' placeholder="Address" className="placeholder:text-third p-4 text-4xl bg-transparent border border-third" />
                         <div className="grid grid-cols-4 gap-8" >
                             <label className="text-4xl">
@@ -46,6 +49,9 @@ export const Payment = () => {
                                 Save
                             </button>
                         </div>
+                        {payment === 'paypal' ? <div className="text-center">
+                            <Checkout />
+                        </div> : (<></>)}
                     </div>
                 </form>
             </div>

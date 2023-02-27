@@ -26,6 +26,9 @@ export const Cart = () => {
     const goStore = () => {
         window.location.href = '/store'
     }
+    const goPayment = () => {
+        window.location.href = '/payment'
+    }
     return (
         <>
             <div className="max-w-[160rem] m-auto text-third font-ft-primary px-20 mb-40 max-sm:px-5 max-sm:mb-20">
@@ -87,7 +90,7 @@ export const Cart = () => {
                                 <h1 className="text-5xl max-lg:text-3xl">$12.536,39</h1>
                             </div>
                             <h1 className="text-2xl font-thin tracking-wide">Taxes and shipping calculated at checkout</h1>
-                            <div className="rounded-xl py-4 px-32 bg-secondary font-sans text-black shadow-bs-primary max-lg:px-20">Check out</div>
+                            <div className="rounded-xl py-4 px-32 bg-secondary font-sans text-black shadow-bs-primary max-lg:px-20 cursor-pointer" onClick={() => goPayment()}>Check out</div>
                         </div>
                     </>
                     <div className="px-10">

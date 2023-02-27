@@ -25,7 +25,9 @@ const Home = ({ setCount }) => {
         </div>
         <div className="flex flex-col gap-8 max-[1200px]:gap-4">
           <h1 className="font-ft-secondary">CREATUS MARKETING AGENCY</h1>
-          <AddPanel id={productList[0][0]} setCount={setCount} title={productList[0][1]} f_price={productList[0][2]} c_price={productList[0][3]} />
+          {productList[0] ?
+            <AddPanel id={productList[0][0]} setCount={setCount} title={productList[0][1]} f_price={productList[0][2]} c_price={productList[0][3]} />
+            : <></>}
           <div className="flex justify-between items-center text-red-800 mt-8">
             <h1 className="cursor-pointer hover:underline">Share</h1>
             <h1 className="cursor-pointer hover:underline">View full details →</h1>

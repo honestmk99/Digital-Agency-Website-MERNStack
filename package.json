@@ -8,6 +8,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@material-tailwind/react": "^1.4.2",
+    "@mobiscroll/react-lite": "^4.10.9",
     "@paypal/react-paypal-js": "^7.8.2",
     "@supabase/supabase-js": "^2.8.0",
     "@testing-library/jest-dom": "^5.16.5",

@@ -12,9 +12,16 @@ import { Cart } from './pages/Cart';
 import { Products } from './pages/Products';
 import { Payment } from './pages/Payment';
 import { supabase } from './connectSupabase';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
 export const ProductContext = createContext();
 export const ProductListContext = createContext();
+
+const initialOptions = {
+  "client-id": "ARRkhuCiYc6I8TY3xlHHebnMd6J4vw3nXohg2C3m_x2JzNpVux_46mOxcytyJB7JKhd_q8VvNC31upiu",
+  currency: "USD",
+  intent: "capture",
+};
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -51,29 +58,31 @@ function App() {
   }, [])
   return (
     <div className='bg-primary relative overflow-hidden'>
-      <ProductListContext.Provider value={{ productList, ProductListContext }}>
-        <ProductContext.Provider value={{ products, setProducts }}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<MainLayout count={count} />}>
-                <Route index path="/" element={<Home setCount={setCount} />} />
-                <Route path="store" element={<Store />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="about" element={<About />} />
-                <Route path="details" element={<Details />} />
-                <Route path="cart" element={<Cart />} />
-                <Route path="product" element={<Products />} />
-                <Route path="payment" element={<Payment />} />
-              </Route>
-            </Routes>
-          </BrowserRouter >
-        </ProductContext.Provider>
-      </ProductListContext.Provider>
+      <PayPalScriptProvider options={initialOptions}>
+        <ProductListContext.Provider value={{ productList, ProductListContext }}>
+          <ProductContext.Provider value={{ products, setProducts }}>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<MainLayout count={count} />}>
+                  <Route index path="/" element={<Home setCount={setCount} />} />
+                  <Route path="store" element={<Store />} />
+                  <Route path="contact" element={<Contact />} />
+                  <Route path="about" element={<About />} />
+                  <Route path="details" element={<Details />} />
+                  <Route path="cart" element={<Cart />} />
+                  <Route path="product" element={<Products />} />
+                  <Route path="payment" element={<Payment />} />
+                </Route>
+              </Routes>
+            </BrowserRouter >
+          </ProductContext.Provider>
+        </ProductListContext.Provider>
+      </PayPalScriptProvider>
       {/* <div className='absolute'>
         <div className='h-[20rem]'></div>
         <div className='bg-third opacity-60'>AAAA</div>
       </div> */}
-    </div>
+    </div >
   );
 }
 
