@@ -29,10 +29,12 @@ module.exports = {
         'bs-hover': '0px 3px 7px 0px #c471f5, 0px 0px 0px 2px #c471f5',
         'bs-rhover': '0px 0px 0px 2px #ee2222, 0px 3px 7px 0px #c471f5'
       },
-
       backgroundImage: {
         'store': 'url(/src/assets/img/store-img.png)'
       },
+      gridTemplateRows: {
+        'gt-primary': 'max-content minmax(0,1fr) max-content auto'
+      }
     },
   },
   plugins: [],
