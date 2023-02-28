@@ -1,4 +1,4 @@
-import { Fragment, useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { ProductListContext } from '../App';
 // import {
 //   Menu,
@@ -13,22 +13,8 @@ import Store_img from "../assets/img/store-img.png"
 import { Project } from '../components/common/Project';
 
 
-const Store = () => {
-  // const [productData, setProductData] = useState();
-  // const getProductData = async () => {
-  //   await supabase
-  //     .from('products')
-  //     .select(`id, prod_name, created_at, first_price, current_price, img_url`)
-  //     .then((res) => {
-  //       res.data && setProductData(res.data);
-  //     });
-  // };
+const Store = ({ setCount }) => {
   const { productList } = useContext(ProductListContext);
-  // useEffect(() => {
-  //   console.log('list', productList)
-  //   // getProductData()
-  // })
-
 
   return (
     <>
@@ -38,15 +24,12 @@ const Store = () => {
           {
             productList.map((item) => {
               return (
-                <Project type={1} id={item[0]} title={item[1]} f_price={item[2]} c_price={item[3]} key={item[0]} />
+                <Project type={1} id={item[0]} title={item[1]} f_price={item[2]} c_price={item[3]} setCount={setCount} key={item[0]} />
               )
             })
           }
         </div>
       </div>
-      {/* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */}
       <div className="min-h-[56rem] relative flex items-center justify-center max-lg:min-h-[40rem] max-md:min-h-[30rem]">
         <div className="h-full w-full left-0 top-0 absolute overflow-hidden block ">
           <img src={Store_img} alt="store-img" className='absolute max-w-full block object-cover object-center' />

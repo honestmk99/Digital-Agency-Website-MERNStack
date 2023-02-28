@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable jsx-a11y/alt-text */
 import introImg from '../assets/img/seller.png'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,28 +9,37 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import { Rating } from '../components/Rating';
 import { AddPanel } from '../components/AddPanel';
+import { ProductListContext, SelectProduct } from '../App';
+import { useContext, useEffect, useState } from 'react';
 
-export const Products = () => {
+export const Products = ({ setCount }) => {
+    const { productID } = useContext(SelectProduct);
+    const { productList } = useContext(ProductListContext);
+    const [product, setProduct] = useState();
+
+    useEffect(() => {
+        productList.map((item) => {
+            if (item[0] === +productID) {
+                setProduct(item);
+            }
+        })
+    }, [productID, productList])
+
     return (
         <>
             <div className='max-w-[160rem] m-auto  text-third font-ft-primary px-20 max-md:px-5'>
                 <div className='grid grid-cols-2 max-lg:grid-cols-1'>
                     <div className='w-9/12 flex flex-col gap-8 max-lg:order-2 max-lg:mt-16'>
-                        <AddPanel />
-                        <div className='flex flex-col gap-8'>
-                            <h1 className='font-ft-secondary leading-[4rem] tracking-wide'>
-                                If you're serious about achieving success in your business and personal life, then the Ultimate Grant Cardone Success Bundle is exactly what you need. This comprehensive package includes some of Cardone's most powerful resources, including:
-                            </h1>
-                            <h1 className='font-ft-secondary leading-[4rem] tracking-wide'>
-                                With this bundle, you'll have access to Cardone's proven strategies and tactics for achieving massive success. You'll learn how to set and achieve audacious goals, develop a winning mindset, and create a thriving business that generates massive wealth.
-                            </h1>
-                            <h1 className='font-ft-secondary leading-[4rem] tracking-wide'>
-                                With this bundle, you'll have access to Cardone's proven strategies and tactics for achieving massive success. You'll learn how to set and achieve audacious goals, develop a winning mindset, and create a thriving business that generates massive wealth.
-                            </h1>
-                            <h1 className='font-ft-secondary leading-[4rem] tracking-wide'>
-                                With this bundle, you'll have access to Cardone's proven strategies and tactics for achieving massive success. You'll learn how to set and achieve audacious goals, develop a winning mindset, and create a thriving business that generates massive wealth.
-                            </h1>
-                        </div>
+                        {product ?
+                            <>
+                                <AddPanel id={product[0]} f_price={product[2]} c_price={product[3]} title={product[1]} setCount={setCount} />
+                                <div className='flex flex-col gap-8'>
+                                    <h1 className='font-ft-secondary leading-[4rem] tracking-wide'>
+                                        {product[4]}
+                                    </h1>
+                                </div>
+                            </>
+                            : <></>}
                     </div>
                     <div className='flex flex-col gap-10 justify-center text-black max-lg:order-1'>
                         <img src={introImg} alt="intro-img" className='' />

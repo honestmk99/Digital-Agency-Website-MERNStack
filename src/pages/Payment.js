@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TotalPrice } from "../App";
 import { Checkout } from "../components/Checkout";
+// import { ConnectButton } from '@rainw'
 // import { Countries } from "../components/Countries";
 // import { Dropdown } from "../components/DropMenu"
 
 export const Payment = () => {
     const [payment, setPayment] = useState("paypal");
+    const { totalPrice } = useContext(TotalPrice);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -41,17 +44,21 @@ export const Payment = () => {
                                 <input type="radio" value="apple" name="payment" checked={payment === "apple"} onChange={() => setPayment('apple')} /> Apple
                             </label>
                         </div>
-                        <div className="flex justify-center">
+                        {payment === 'paypal' ? <div className="text-center">
+                            <Checkout price={totalPrice} />
+                        </div> : payment === 'crypto' ?
+                            <div className="flex items-center justify-center"><div className="flex items-center rounded-3xl justify-center bg-secondary text-primary text-5xl px-24 py-6 cursor-pointer shadow-bs-primary">
+                                {/* <ConnectButton /> */}
+                                <h1>Connect Wallet</h1>
+                            </div></div> : <></>}
+                        {/* <div className="flex justify-center">
                             <button
                                 type="submit"
-                                className="rounded-md border-2 border-third text-5xl px-32 py-4 bg-secondary"
+                                className="rounded-md border-2 border-third text-5xl px-32 py-4 bg-secondary text-primary"
                             >
                                 Save
                             </button>
-                        </div>
-                        {payment === 'paypal' ? <div className="text-center">
-                            <Checkout />
-                        </div> : (<></>)}
+                        </div> */}
                     </div>
                 </form>
             </div>

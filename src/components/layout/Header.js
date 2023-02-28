@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { React, useContext, useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import introImg from "../../assets/img/intro-img.png";
 // import { Sidebar } from "../Navbar";
 import { useMedia } from "react-use";
-import { ProductContext } from "../../App";
+// import { ProductContext } from "../../App";
 
 // const tabsData = [
 //     {
@@ -28,7 +28,7 @@ import { ProductContext } from "../../App";
 // ];
 
 const Header = ({ count }) => {
-    const { products } = useContext(ProductContext);
+    // const { products } = useContext(ProductContext);
     const [navbar, setNavbar] = useState(false);
     // const [isVisible, setIsVisible] = useState(false);
     // const [isSearch, setIsSearch] = useState(false);
@@ -36,6 +36,7 @@ const Header = ({ count }) => {
     const isMobile = useMedia("(max-width: 800px)");
 
     const goCart = () => {
+        console.log('TWERWTEWE')
         window.location.href = '/cart'
     }
 
@@ -170,7 +171,7 @@ const Header = ({ count }) => {
                                 className="rounded-[50px]"
                             />
                         </div>
-                        <div className="col-span-1 justify-self-end flex items-center relative cursor-pointer">
+                        <div className="col-span-1 justify-self-end flex items-center relative cursor-pointer" onClick={() => goCart()}>
                             <svg
                                 className="w-16 h-16 text-third"
                                 aria-hidden="true"
@@ -185,7 +186,7 @@ const Header = ({ count }) => {
                                     d="M20.5 6.5a4.75 4.75 0 00-4.75 4.75v.56h-3.16l-.77 11.6a5 5 0 004.99 5.34h7.38a5 5 0 004.99-5.33l-.77-11.6h-3.16v-.57A4.75 4.75 0 0020.5 6.5zm3.75 5.31v-.56a3.75 3.75 0 10-7.5 0v.56h7.5zm-7.5 1h7.5v.56a3.75 3.75 0 11-7.5 0v-.56zm-1 0v.56a4.75 4.75 0 109.5 0v-.56h2.22l.71 10.67a4 4 0 01-3.99 4.27h-7.38a4 4 0 01-4-4.27l.72-10.67h2.22z"
                                 ></path>
                             </svg>
-                            <div className="rounded-full bg-secondary w-8 h-8 absolute right-1 bottom-5 flex items-center justify-center" onClick={() => goCart()}>
+                            <div className="rounded-full bg-secondary w-8 h-8 absolute right-1 bottom-5 flex items-center justify-center">
                                 <h1 className="text-base font-bold">{count}</h1>
                             </div>
                         </div>

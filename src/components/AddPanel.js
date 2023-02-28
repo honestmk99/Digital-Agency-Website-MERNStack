@@ -7,14 +7,9 @@ import { Rating } from "./Rating"
 
 export const AddPanel = ({ id, f_price, c_price, img_url, title, setCount }) => {
     const [buyCount, setBuyCount] = useState(1);
+    const [localFlag, setLocalFlag] = useState(false);
     const { products, setProducts } = useContext(ProductContext);
     const [projects, storeProjects] = useLocalStorage('project', []);
-
-    useEffect(() => {
-        if (projects) {
-            setProducts(projects)
-        }
-    }, [])
 
     const buyProject = (prop) => {
         if (buyCount > 1 && prop < 0) {
@@ -24,12 +19,11 @@ export const AddPanel = ({ id, f_price, c_price, img_url, title, setCount }) => 
         }
     }
 
-    const goCart = () => {
+    const goCart = async () => {
         let count = 0;
         let list = products;
         let fleg = false;
         list.map((item) => {
-            console.log(item)
             if (item[0] === id) {
                 item[1] += buyCount;
                 fleg = true
@@ -41,10 +35,21 @@ export const AddPanel = ({ id, f_price, c_price, img_url, title, setCount }) => 
             count += buyCount;
         }
         setProducts(list);
-        storeProjects(products);
         setCount(count);
-        window.location.href = '/cart'
+        setLocalFlag(true)
     }
+
+    useEffect(() => {
+        if (localFlag) {
+            storeProjects(products);
+        }
+    }, [products, localFlag])
+
+    useEffect(() => {
+        if (projects.length && localFlag) {
+            window.location.href = '/cart'
+        }
+    }, [projects, localFlag])
 
     return (
         <>
