@@ -3,10 +3,10 @@ import Header from './Header'
 import Footer from './Footer'
 import { Outlet } from 'react-router-dom'
 
-const MainLayout = ({ count }) => {
+const MainLayout = () => {
     return (
         <>
-            <Header count={count} />
+            <Header />
             <div className='pt-80 relative z-0'>
                 <Outlet />
             </div>
